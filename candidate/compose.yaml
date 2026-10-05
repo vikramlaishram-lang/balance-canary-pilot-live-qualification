@@ -1,0 +1,104 @@
+x-base: &base
+  image: balance-canary-pilot:0.1.1
+  build: .
+  restart: unless-stopped
+  read_only: true
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  tmpfs: [/tmp]
+  pids_limit: 128
+  mem_limit: 512m
+
+x-coordinator-env: &coordinator-env
+  BALANCE_ROLE: gateway
+  BALANCE_POLICY: /config/policy.json
+  BALANCE_DATA: /data
+  AUTHORITY_PUBLIC_KEY: /keys/authority.pub
+  WRITER_PUBLIC_KEY: /keys/writer.pub
+  OBSERVER_PUBLIC_KEY: /keys/observer.pub
+  WRITER_URL: http://writer:8080
+  OBSERVER_URL: http://observer:8080
+  WRITER_TOKEN_FILE: /tokens/writer.token
+  OBSERVER_TOKEN_FILE: /tokens/observer.token
+  API_TOKEN_FILE: /tokens/gateway.token
+
+services:
+  gateway:
+    <<: *base
+    environment: *coordinator-env
+    ports: ["127.0.0.1:8080:8080"]
+    volumes:
+      - ./policy.json:/config/policy.json:ro
+      - ./keys/authority.pub:/keys/authority.pub:ro
+      - ./keys/writer.pub:/keys/writer.pub:ro
+      - ./keys/observer.pub:/keys/observer.pub:ro
+      - ./keys/gateway.token:/tokens/gateway.token:ro
+      - ./keys/writer.token:/tokens/writer.token:ro
+      - ./keys/observer.token:/tokens/observer.token:ro
+      - objectives:/data
+    networks: [control]
+
+  worker:
+    <<: *base
+    command: ["python", "-m", "balance.worker"]
+    environment: *coordinator-env
+    volumes:
+      - ./policy.json:/config/policy.json:ro
+      - ./keys/authority.pub:/keys/authority.pub:ro
+      - ./keys/writer.pub:/keys/writer.pub:ro
+      - ./keys/observer.pub:/keys/observer.pub:ro
+      - ./keys/writer.token:/tokens/writer.token:ro
+      - ./keys/observer.token:/tokens/observer.token:ro
+      - objectives:/data
+    networks: [control]
+
+  writer:
+    <<: *base
+    environment:
+      BALANCE_ROLE: writer
+      BALANCE_POLICY: /config/policy.json
+      BALANCE_DATA: /data
+      AUTHORITY_PUBLIC_KEY: /keys/authority.pub
+      OBSERVER_PUBLIC_KEY: /keys/observer.pub
+      SIGNING_PRIVATE_KEY: /keys/writer.key
+      API_TOKEN_FILE: /tokens/writer.token
+      GOOGLE_APPLICATION_CREDENTIALS: /cloud/identity.json
+    volumes:
+      - ./policy.json:/config/policy.json:ro
+      - ./keys/authority.pub:/keys/authority.pub:ro
+      - ./keys/observer.pub:/keys/observer.pub:ro
+      - ./keys/writer.key:/keys/writer.key:ro
+      - ./keys/writer.token:/tokens/writer.token:ro
+      - ./credentials/writer.json:/cloud/identity.json:ro
+      - intents:/data
+    networks: [control, writer_egress]
+
+  observer:
+    <<: *base
+    environment:
+      BALANCE_ROLE: observer
+      BALANCE_POLICY: /config/policy.json
+      BALANCE_DATA: /data
+      WRITER_PUBLIC_KEY: /keys/writer.pub
+      SIGNING_PRIVATE_KEY: /keys/observer.key
+      API_TOKEN_FILE: /tokens/observer.token
+      GOOGLE_APPLICATION_CREDENTIALS: /cloud/identity.json
+    volumes:
+      - ./policy.json:/config/policy.json:ro
+      - ./keys/writer.pub:/keys/writer.pub:ro
+      - ./keys/observer.key:/keys/observer.key:ro
+      - ./keys/observer.token:/tokens/observer.token:ro
+      - ./credentials/observer.json:/cloud/identity.json:ro
+      - observations:/data
+    networks: [control, observer_egress]
+
+networks:
+  control:
+    internal: true
+  writer_egress: {}
+  observer_egress: {}
+
+volumes:
+  objectives: {}
+  intents: {}
+  observations: {}

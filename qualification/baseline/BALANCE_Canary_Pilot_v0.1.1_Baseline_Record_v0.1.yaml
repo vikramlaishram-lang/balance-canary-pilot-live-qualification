@@ -1,0 +1,343 @@
+{
+  "schema": {
+    "name": "BALANCE_Canary_Pilot_Baseline_Record",
+    "version": "0.1"
+  },
+  "status": {
+    "milestone": "MILESTONE_1",
+    "result": "PENDING",
+    "local_reproduction_result": "PASS",
+    "result_pending_reason": "Final commit/tag/private-remote checks belong to BASELINE_FREEZE.json",
+    "live_cloud_qualification": "NOT_STARTED"
+  },
+  "record_identity": {
+    "created_at": "2026-10-05T07:19:27.943437+00:00",
+    "operator": "nisus",
+    "host": {
+      "observed_at": "2026-10-05T07:19:27.943401+00:00",
+      "kernel_release": "6.6.87.2-microsoft-standard-WSL2",
+      "distribution_id": "ubuntu",
+      "distribution_version": "24.04",
+      "wsl2_kernel_observed": true,
+      "host_operating_system": "Windows (inferred from WSL2)",
+      "workspace_expected": "/home/nisus/Balance/balance-canary-pilot",
+      "expected_profile_matches": true
+    },
+    "workspace": "/home/nisus/Balance/balance-canary-pilot",
+    "phase": "PRE_COMMIT"
+  },
+  "repository_expected": {
+    "owner_repository": "vikramlaishram-lang/balance-canary-pilot-live-qualification",
+    "remote_name": "origin",
+    "visibility": "private",
+    "branch": "main",
+    "annotated_tag": "pilot-v0.1.1-local-qualified"
+  },
+  "candidate": {
+    "archive": {
+      "filename": "BALANCE_Canary_Pilot_0.1.1_2026-09-12.zip",
+      "expected_sha256": "00ea748bdacab7b743bf54db2fbf6ee976ac6cdbc249cc3a8c176b80346cf74e",
+      "observed_sha256": "00ea748bdacab7b743bf54db2fbf6ee976ac6cdbc249cc3a8c176b80346cf74e",
+      "exact_match": true
+    },
+    "manifest": {
+      "expected_entry_count": 32,
+      "verified_entry_count": 32,
+      "missing_count": 0,
+      "changed_count": 0,
+      "unexpected_count": 0,
+      "manifest_sha256": "fef22c566b35055a210150d1bc621db0a60499ba469a83d691a69a7a82908e33",
+      "result": "PASS"
+    },
+    "source_binding": {
+      "repo_path": "candidate",
+      "clean_extraction_reference": "Fresh ZIP decode from the pinned archive; no cached extraction",
+      "git_scope": "INDEX",
+      "compared_files": 33,
+      "changed_files": 0,
+      "missing_files": 0,
+      "unexpected_tracked_files": 0,
+      "unexpected_working_files": 0,
+      "exact_match": true,
+      "comparison_method": {
+        "id": "manifest-hash-compare-v1",
+        "script_path": "tools/verify_baseline.py",
+        "script_sha256": "df7d720dfc1b185ef5f61fa60e0b289fbe188e4c9bd3e6085f7d1d3c897c855a",
+        "script_git_blob_oid": "1e42450913dd436d4943b3ebddc5e992c200fe5e",
+        "script_commit_reference": "POST_COMMIT_FREEZE_ONLY"
+      }
+    }
+  },
+  "disposable_target_package": {
+    "archive": {
+      "filename": "BALANCE_Disposable_Target_asia-south1_2026-09-12.zip",
+      "expected_sha256": "b2c6d3bb33eb6b6365b18ea8b458068845e4eab10cba9b38623e69419cd03a4c",
+      "observed_sha256": "b2c6d3bb33eb6b6365b18ea8b458068845e4eab10cba9b38623e69419cd03a4c",
+      "exact_match": true
+    },
+    "manifest": {
+      "expected_entry_count": 13,
+      "verified_entry_count": 13,
+      "missing_count": 0,
+      "changed_count": 0,
+      "unexpected_count": 0,
+      "manifest_sha256": "453f47369bc95d89bd79f35f5269b05815cd6299123cf9dd72c4f8a5807e303c",
+      "result": "PASS"
+    },
+    "source_binding": {
+      "repo_path": "target-package",
+      "clean_extraction_reference": "Fresh ZIP decode from the pinned archive; no cached extraction",
+      "git_scope": "INDEX",
+      "compared_files": 14,
+      "changed_files": 0,
+      "missing_files": 0,
+      "unexpected_tracked_files": 0,
+      "unexpected_working_files": 0,
+      "exact_match": true,
+      "comparison_method": {
+        "id": "manifest-hash-compare-v1",
+        "script_path": "tools/verify_baseline.py",
+        "script_sha256": "df7d720dfc1b185ef5f61fa60e0b289fbe188e4c9bd3e6085f7d1d3c897c855a",
+        "script_git_blob_oid": "1e42450913dd436d4943b3ebddc5e992c200fe5e",
+        "script_commit_reference": "POST_COMMIT_FREEZE_ONLY"
+      }
+    }
+  },
+  "environment": {
+    "python_executable": "/home/nisus/Balance/balance-canary-pilot/.venv/bin/python",
+    "python_version": "3.12.3 (main, Jan  8 2026, 11:30:50) [GCC 13.3.0]",
+    "tools": {
+      "python": {
+        "argv": [
+          "/home/nisus/Balance/balance-canary-pilot/.venv/bin/python",
+          "--version"
+        ],
+        "working_directory": "/home/nisus/Balance/balance-canary-pilot",
+        "started_at": "2026-10-05T07:19:15.656633+00:00",
+        "completed_at": "2026-10-05T07:19:15.661654+00:00",
+        "exit_code": 0,
+        "stdout_stderr": {
+          "path": "evidence/local/20261005T071915-bbf7fe78/python-version.txt",
+          "sha256": "5b3e43dc38ca01e3f5a7854ba50d4330864b0c1e0f646650b2c78cf072acc366"
+        }
+      },
+      "git": {
+        "argv": [
+          "git",
+          "--version"
+        ],
+        "working_directory": "/home/nisus/Balance/balance-canary-pilot",
+        "started_at": "2026-10-05T07:19:15.661876+00:00",
+        "completed_at": "2026-10-05T07:19:15.664748+00:00",
+        "exit_code": 0,
+        "stdout_stderr": {
+          "path": "evidence/local/20261005T071915-bbf7fe78/git-version.txt",
+          "sha256": "25f3602b5caaf92437be1e76b53698e8d73f14a6c71c2e91c8d5875f923ab29f"
+        }
+      },
+      "github_cli": {
+        "argv": [
+          "gh",
+          "--version"
+        ],
+        "working_directory": "/home/nisus/Balance/balance-canary-pilot",
+        "started_at": "2026-10-05T07:19:15.664885+00:00",
+        "completed_at": "2026-10-05T07:19:15.936336+00:00",
+        "exit_code": 0,
+        "stdout_stderr": {
+          "path": "evidence/local/20261005T071915-bbf7fe78/github_cli-version.txt",
+          "sha256": "bea5e34b2e2a652e5952756f8757bee261c2175fab4c90de801c56503c5edbac"
+        }
+      },
+      "gcloud": {
+        "argv": [
+          "gcloud",
+          "--version"
+        ],
+        "working_directory": "/home/nisus/Balance/balance-canary-pilot",
+        "started_at": "2026-10-05T07:19:15.936513+00:00",
+        "completed_at": "2026-10-05T07:19:17.671778+00:00",
+        "exit_code": 0,
+        "stdout_stderr": {
+          "path": "evidence/local/20261005T071915-bbf7fe78/gcloud-version.txt",
+          "sha256": "1c0387dc2ec514509a4e0ac7aa5870ad943a947cc72cc28cd2141996922d2797"
+        }
+      },
+      "docker": {
+        "argv": [
+          "docker",
+          "version"
+        ],
+        "working_directory": "/home/nisus/Balance/balance-canary-pilot",
+        "started_at": "2026-10-05T07:19:17.671956+00:00",
+        "completed_at": "2026-10-05T07:19:20.298140+00:00",
+        "exit_code": 0,
+        "stdout_stderr": {
+          "path": "evidence/local/20261005T071915-bbf7fe78/docker-version.txt",
+          "sha256": "f4d1ecc6866d8c43423fb29e0f43144a697d9a7a7c478e4ccc3d6b1eff8315c9"
+        }
+      },
+      "docker_compose": {
+        "argv": [
+          "docker",
+          "compose",
+          "version"
+        ],
+        "working_directory": "/home/nisus/Balance/balance-canary-pilot",
+        "started_at": "2026-10-05T07:19:20.298349+00:00",
+        "completed_at": "2026-10-05T07:19:21.008323+00:00",
+        "exit_code": 0,
+        "stdout_stderr": {
+          "path": "evidence/local/20261005T071915-bbf7fe78/docker_compose-version.txt",
+          "sha256": "af113c8bbc0ccf2b0bb7f0aa8ea7134c905a1c570766beb7257d7c573470de9c"
+        }
+      }
+    }
+  },
+  "candidate_tests": {
+    "argv": [
+      "/home/nisus/Balance/balance-canary-pilot/.venv/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-v"
+    ],
+    "working_directory": "/home/nisus/Balance/balance-canary-pilot/candidate",
+    "started_at": "2026-10-05T07:19:21.008830+00:00",
+    "completed_at": "2026-10-05T07:19:25.797185+00:00",
+    "exit_code": 0,
+    "stdout_stderr": {
+      "path": "evidence/local/20261005T071915-bbf7fe78/candidate_tests.txt",
+      "sha256": "f2bef28ea84ab018ebd8f0ef7ec7571f2507c32636564b215e7382477ad6ee61"
+    },
+    "tests_expected": 31,
+    "tests_run": 31,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "PASS"
+  },
+  "target_fixture_tests": {
+    "argv": [
+      "/home/nisus/Balance/balance-canary-pilot/.venv/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-v"
+    ],
+    "working_directory": "/home/nisus/Balance/balance-canary-pilot/target-package",
+    "started_at": "2026-10-05T07:19:25.798270+00:00",
+    "completed_at": "2026-10-05T07:19:27.645146+00:00",
+    "exit_code": 0,
+    "stdout_stderr": {
+      "path": "evidence/local/20261005T071915-bbf7fe78/target_fixture_tests.txt",
+      "sha256": "7c9cf54f0cb379f02a8ab1013a19a6851abb70721dac3b8f83c7b2ebac93a137"
+    },
+    "tests_expected": 6,
+    "tests_run": 6,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "PASS"
+  },
+  "provisioning_plan": {
+    "argv": [
+      "/home/nisus/Balance/balance-canary-pilot/.venv/bin/python",
+      "provision.py",
+      "plan"
+    ],
+    "working_directory": "/home/nisus/Balance/balance-canary-pilot/target-package",
+    "started_at": "2026-10-05T07:19:27.646647+00:00",
+    "completed_at": "2026-10-05T07:19:27.755384+00:00",
+    "exit_code": 0,
+    "stdout_stderr": {
+      "path": "evidence/local/20261005T071915-bbf7fe78/provision-plan.txt",
+      "sha256": "c2afc7fd23ad05e4d4ca07025f4bc908c0012d8c1d187b64329c380365e8beba"
+    },
+    "observed": {
+      "status": "PREPARED_NOT_DEPLOYED",
+      "project": null,
+      "region": "asia-south1",
+      "service": "balance-canary-target",
+      "base_revision": null,
+      "candidate_revision": null,
+      "markers": [
+        "baseline",
+        "candidate"
+      ],
+      "initial_traffic": {
+        "base": 100,
+        "candidate": 0
+      },
+      "pilot_consequence": {
+        "base": 90,
+        "candidate": 10
+      },
+      "balance_candidate_sha256": "00ea748bdacab7b743bf54db2fbf6ee976ac6cdbc249cc3a8c176b80346cf74e",
+      "required_operator_inputs": [
+        "unused disposable project ID",
+        "selected billing account",
+        "authenticated gcloud and Docker",
+        "organization/folder if required"
+      ]
+    },
+    "exact_required_fields_match": true,
+    "consequential_operation_performed": false,
+    "result": "PASS"
+  },
+  "baseline_diff_check": {
+    "procedure_version": "1",
+    "result": "PASS",
+    "candidate_archive_sha_match": true,
+    "candidate_manifest_match": true,
+    "candidate_repo_tree_matches_clean_archive": true,
+    "target_archive_sha_match": true,
+    "target_manifest_match": true,
+    "target_repo_tree_matches_clean_archive": true,
+    "permitted_repo_only_files": [
+      ".gitattributes",
+      ".gitignore",
+      "BASELINE.md",
+      "artifacts/BALANCE_Canary_Pilot_0.1.1_2026-09-12.zip",
+      "artifacts/BALANCE_Disposable_Target_asia-south1_2026-09-12.zip",
+      "qualification/baseline/BALANCE_Canary_Pilot_v0.1.1_Baseline_Record_v0.1.yaml",
+      "tools/verify_baseline.py"
+    ],
+    "undeclared_difference_count": 0,
+    "undeclared_differences": [],
+    "comparison_output": {
+      "path": "evidence/local/20261005T071915-bbf7fe78/source-comparison.json",
+      "sha256": "6d3b49df3ab82da9968bb192a1f9f3a5b156a0ee16ed7b6f81a0f6b7ef3d07f2"
+    }
+  },
+  "retained_evidence": {
+    "index_path": "evidence/local/20261005T071915-bbf7fe78/EVIDENCE_INDEX.json",
+    "index_sha256": "23388269f18fe8bcb9fa8fad75699dc6966eb425f5a80822c938c0d716f0d704"
+  },
+  "no_cloud_declaration": {
+    "operator": "nisus",
+    "declared_at": "2026-10-05T07:19:27.943645+00:00",
+    "scope": "No GCP resource has been created for this Canary pilot",
+    "declared_no_resources_created": true,
+    "basis_kind": "OPERATOR_DECLARATION_NOT_INDEPENDENT_CLOUD_INVENTORY"
+  },
+  "local_exit_predicate": {
+    "archive_integrity": true,
+    "manifests_verified": true,
+    "source_binding_verified": true,
+    "candidate_31_of_31": true,
+    "target_fixture_6_of_6": true,
+    "provisioning_plan_prepared_not_deployed": true,
+    "provisioning_plan_initial_100_0": true,
+    "operator_environment_ready": true,
+    "collector_issued_no_cloud_create_command": true,
+    "scoped_operator_no_cloud_declaration": true
+  },
+  "scope_limits": [
+    "DOES_NOT_ESTABLISH_LIVE_CLOUD_QUALIFICATION",
+    "DOES_NOT_ESTABLISH_RUNTIME_IAM_OR_IDENTITY_ISOLATION",
+    "NO_CLOUD_ABSENCE_REQUIRES_OPERATOR_DECLARATION",
+    "REMOTE_REF_MATCH_IS_POINT_IN_TIME",
+    "TRUSTS_COLLECTOR_HOST_TOOLCHAIN_AND_CLOCK"
+  ]
+}

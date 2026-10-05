@@ -1,0 +1,19 @@
+# Repository-only exclusions; none may weaken frozen-package verification.
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+evidence/
+secrets/
+credentials/
+keys/
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.sqlite
+*.sqlite3
+*.db
+qualification-target-run/
+

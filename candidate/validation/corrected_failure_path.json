@@ -1,0 +1,166 @@
+{
+  "version": "0.1.1",
+  "source_engine_sha256": "fa2b125d669720bd28589df43482c87e1152eb70248e37b5431885db32745a13",
+  "external_target": "SIMULATED",
+  "cloud_calls": 0,
+  "first_state": "NEEDS_REVIEW",
+  "first_observation": {
+    "payload": {
+      "kind": "OBSERVATION",
+      "intent_digest": "cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d",
+      "policy_digest": "0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a",
+      "target": "projects/pilot-project/locations/us-central1/services/payments",
+      "service_uid": "service-instance-01",
+      "challenge": "3ca3a78b021c4277bda4eaaea15832f2",
+      "observed_at": 1000,
+      "operation": "projects/pilot-project/locations/us-central1/operations/op-1",
+      "generation": "11",
+      "verdict": "CHECK_FAILED",
+      "checks": {
+        "ready": true,
+        "smoke": false
+      },
+      "evidence": {
+        "service_before": "b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79",
+        "operation": "41bf07567de59bd00f83ba5306bb488b6ed1df98b203e553dc15959e9dc930c2",
+        "health": "f97bd3176ea9f88ea7c5e71ed1cc2ee9b72280537b71a11e3a44fa444c77774f"
+      },
+      "reason": "Final target verification unavailable: service_after timeout after candidate smoke=false",
+      "observed_traffic": {
+        "payments-base": 90,
+        "payments-candidate": 10
+      }
+    },
+    "signature": "Lih873BapLomcP5dN2qThafvVF7a67H/wHwAnZ+IKH1NuaL6Yv8Hv1VmvlWT7+danunqdmgOlz6PXQAKi2e7AA=="
+  },
+  "raw_health": {
+    "nonce": "3ca3a78b021c4277bda4eaaea15832f2",
+    "revision": "payments-candidate",
+    "checks": {
+      "ready": true,
+      "smoke": false
+    }
+  },
+  "raw_health_sha256": "f97bd3176ea9f88ea7c5e71ed1cc2ee9b72280537b71a11e3a44fa444c77774f",
+  "later_signed_passes": [
+    {
+      "payload": {
+        "kind": "OBSERVATION",
+        "intent_digest": "cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d",
+        "policy_digest": "0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a",
+        "target": "projects/pilot-project/locations/us-central1/services/payments",
+        "service_uid": "service-instance-01",
+        "challenge": "2f334f75f6024e85824b824499d14240",
+        "observed_at": 1010,
+        "operation": "projects/pilot-project/locations/us-central1/operations/op-1",
+        "generation": "11",
+        "verdict": "PASS",
+        "checks": {
+          "ready": true,
+          "smoke": true
+        },
+        "evidence": {
+          "service_before": "b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79",
+          "operation": "41bf07567de59bd00f83ba5306bb488b6ed1df98b203e553dc15959e9dc930c2",
+          "health": "b731495fca1dc9bf1edd552c1c9685d04f84ad31207be4add23a59176f0ef96f",
+          "service_after": "b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79"
+        },
+        "reason": null,
+        "observed_traffic": {
+          "payments-base": 90,
+          "payments-candidate": 10
+        }
+      },
+      "signature": "61ApJNqtHhAJH1vGZ6x7X7PiXOH9fHj6qA+deQIWN3ADkSSGk8vOxKYdMsxXPAbQMjKBMSomBiuIq94+EhnDDw=="
+    },
+    {
+      "payload": {
+        "kind": "OBSERVATION",
+        "intent_digest": "cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d",
+        "policy_digest": "0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a",
+        "target": "projects/pilot-project/locations/us-central1/services/payments",
+        "service_uid": "service-instance-01",
+        "challenge": "0196b8b2799d4149ba010ef060b22af5",
+        "observed_at": 1020,
+        "operation": "projects/pilot-project/locations/us-central1/operations/op-1",
+        "generation": "11",
+        "verdict": "PASS",
+        "checks": {
+          "ready": true,
+          "smoke": true
+        },
+        "evidence": {
+          "service_before": "b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79",
+          "operation": "41bf07567de59bd00f83ba5306bb488b6ed1df98b203e553dc15959e9dc930c2",
+          "health": "83c2b7fdf5c60441b4404b4386ba5142a95415c41b442722a1ba85d55771f3ab",
+          "service_after": "b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79"
+        },
+        "reason": null,
+        "observed_traffic": {
+          "payments-base": 90,
+          "payments-candidate": 10
+        }
+      },
+      "signature": "ioLZMy0wekpsKA7CzJRdNbnE8szkl3kvPwEjrrALVErSqiQZP2flKr+6au7HIWvw5lLXv/cvrabxr2LTSk1GBA=="
+    },
+    {
+      "payload": {
+        "kind": "OBSERVATION",
+        "intent_digest": "cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d",
+        "policy_digest": "0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a",
+        "target": "projects/pilot-project/locations/us-central1/services/payments",
+        "service_uid": "service-instance-01",
+        "challenge": "2011be25976942f2ad33bb7841be622c",
+        "observed_at": 1030,
+        "operation": "projects/pilot-project/locations/us-central1/operations/op-1",
+        "generation": "11",
+        "verdict": "PASS",
+        "checks": {
+          "ready": true,
+          "smoke": true
+        },
+        "evidence": {
+          "service_before": "b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79",
+          "operation": "41bf07567de59bd00f83ba5306bb488b6ed1df98b203e553dc15959e9dc930c2",
+          "health": "055d084fc4e15793c57305035c8e366eff5ac8b61f5b02e1e8d56dd2f17b5a81",
+          "service_after": "b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79"
+        },
+        "reason": null,
+        "observed_traffic": {
+          "payments-base": 90,
+          "payments-candidate": 10
+        }
+      },
+      "signature": "4B9lZE/z8ZZWj5lJ8bPZG5IDgf0faykpcCG5qQXV6jiEqnOGgTlWa/jRtpqU5ZR3TrEldZKnqU3icHcAt1xTDQ=="
+    }
+  ],
+  "states_after_restart": [
+    "NEEDS_REVIEW",
+    "NEEDS_REVIEW",
+    "NEEDS_REVIEW"
+  ],
+  "final_state": "NEEDS_REVIEW",
+  "completion": null,
+  "writer_state": "SUBMITTED",
+  "simulated_mutations": 1,
+  "objective_history": [
+    {
+      "sequence": 1,
+      "record_id": "objective-1",
+      "event": "{\"at\": 1789184586, \"document\": {\"approval\": {\"payload\": {\"expires_at\": 1300, \"holder\": \"balance-coordinator\", \"intent\": {\"base_percent\": 90, \"base_revision\": \"payments-base\", \"candidate_percent\": 10, \"candidate_revision\": \"payments-candidate\", \"expected_etag\": \"v10\", \"expected_generation\": \"10\", \"objective_id\": \"objective-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"version\": 1}, \"issued_at\": 1000, \"issuer\": \"operator\", \"kind\": \"AUTHORIZATION\"}, \"signature\": \"aikoMe3oUQPyPZT9OwVUnDHphP8GGXR3lwPyh/gDsWuVBZBzuvrzneAFoYco3Y035ISV54ALV/quvOoykiM/BQ==\"}, \"intent\": {\"base_percent\": 90, \"base_revision\": \"payments-base\", \"candidate_percent\": 10, \"candidate_revision\": \"payments-candidate\", \"expected_etag\": \"v10\", \"expected_generation\": \"10\", \"objective_id\": \"objective-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"version\": 1}, \"next_at\": 0, \"observations\": 0, \"samples\": []}, \"state\": \"READY\"}",
+      "previous": "0000000000000000000000000000000000000000000000000000000000000000",
+      "hash": "48381a71c932ae0365a84405ef399b6ff3f90520e079e803609fab20090d3889"
+    },
+    {
+      "sequence": 2,
+      "record_id": "objective-1",
+      "event": "{\"at\": 1789184586, \"document\": {\"approval\": {\"payload\": {\"expires_at\": 1300, \"holder\": \"balance-coordinator\", \"intent\": {\"base_percent\": 90, \"base_revision\": \"payments-base\", \"candidate_percent\": 10, \"candidate_revision\": \"payments-candidate\", \"expected_etag\": \"v10\", \"expected_generation\": \"10\", \"objective_id\": \"objective-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"version\": 1}, \"issued_at\": 1000, \"issuer\": \"operator\", \"kind\": \"AUTHORIZATION\"}, \"signature\": \"aikoMe3oUQPyPZT9OwVUnDHphP8GGXR3lwPyh/gDsWuVBZBzuvrzneAFoYco3Y035ISV54ALV/quvOoykiM/BQ==\"}, \"dispatch\": {\"payload\": {\"intent_digest\": \"cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d\", \"kind\": \"DISPATCH_RECORD\", \"objective_id\": \"objective-1\", \"operation\": \"projects/pilot-project/locations/us-central1/operations/op-1\", \"reason\": null, \"recorded_at\": 1000, \"state\": \"SUBMITTED\"}, \"signature\": \"pCCsuODrSF5fdo0AJHgM6lk6qVKL6At3KHmpc2L/8ZWMchlMDBoESvfRJFK+hRxesnb4oRXKpLDNGoWRIp8gBg==\"}, \"intent\": {\"base_percent\": 90, \"base_revision\": \"payments-base\", \"candidate_percent\": 10, \"candidate_revision\": \"payments-candidate\", \"expected_etag\": \"v10\", \"expected_generation\": \"10\", \"objective_id\": \"objective-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"version\": 1}, \"last_observation\": {\"payload\": {\"challenge\": \"3ca3a78b021c4277bda4eaaea15832f2\", \"checks\": {\"ready\": true, \"smoke\": false}, \"evidence\": {\"health\": \"f97bd3176ea9f88ea7c5e71ed1cc2ee9b72280537b71a11e3a44fa444c77774f\", \"operation\": \"41bf07567de59bd00f83ba5306bb488b6ed1df98b203e553dc15959e9dc930c2\", \"service_before\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\"}, \"generation\": \"11\", \"intent_digest\": \"cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d\", \"kind\": \"OBSERVATION\", \"observed_at\": 1000, \"observed_traffic\": {\"payments-base\": 90, \"payments-candidate\": 10}, \"operation\": \"projects/pilot-project/locations/us-central1/operations/op-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"reason\": \"Final target verification unavailable: service_after timeout after candidate smoke=false\", \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"verdict\": \"CHECK_FAILED\"}, \"signature\": \"Lih873BapLomcP5dN2qThafvVF7a67H/wHwAnZ+IKH1NuaL6Yv8Hv1VmvlWT7+danunqdmgOlz6PXQAKi2e7AA==\"}, \"next_action\": \"Operator review required. No rollback or repeat mutation is authorized by this objective.\", \"next_at\": 0, \"observations\": 1, \"samples\": []}, \"state\": \"NEEDS_REVIEW\"}",
+      "previous": "48381a71c932ae0365a84405ef399b6ff3f90520e079e803609fab20090d3889",
+      "hash": "d47984a802c43146ffd4f06c09c56ff1ac851ca206e0080adb34f1a0038e0317"
+    }
+  ],
+  "public_verification_keys": {
+    "writer": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAgibvoFjK7EiUBSSNTXlUwCZLKqW1PT7oWfyROGQ+4zM=\n-----END PUBLIC KEY-----\n",
+    "observer": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAqknhSo9OQMB+GGOzl878HhDRvNPlWuUTfnRWk1C0BTU=\n-----END PUBLIC KEY-----\n"
+  }
+}

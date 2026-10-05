@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "target": "projects/replace-project/locations/us-central1/services/payments",
+  "holder": "balance-coordinator",
+  "max_candidate_percent": 10,
+  "max_grant_seconds": 900,
+  "health_url": "https://REPLACE_SERVICE_HOST.run.app/balance-health",
+  "health_audience": "https://REPLACE_SERVICE_HOST.run.app",
+  "required_checks": ["ready", "smoke"],
+  "min_samples": 3,
+  "min_window_seconds": 20,
+  "sample_interval_seconds": 5,
+  "max_observations": 60,
+  "evidence_max_age_seconds": 30
+}

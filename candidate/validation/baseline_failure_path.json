@@ -1,0 +1,215 @@
+{
+  "version": "0.1.0",
+  "source_engine_sha256": "ebe9dca12469eeaf52f87d8a43c7105e4a11364fe170aaf3448bdd578faf4300",
+  "external_target": "SIMULATED",
+  "cloud_calls": 0,
+  "first_state": "OBSERVING",
+  "first_observation": {
+    "payload": {
+      "kind": "OBSERVATION",
+      "intent_digest": "cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d",
+      "policy_digest": "0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a",
+      "target": "projects/pilot-project/locations/us-central1/services/payments",
+      "service_uid": "service-instance-01",
+      "challenge": "e36bb3c8878749949c3cdd7c01bea451",
+      "observed_at": 1000,
+      "operation": "projects/pilot-project/locations/us-central1/operations/op-1",
+      "generation": "11",
+      "verdict": "OBSERVATION_UNAVAILABLE",
+      "checks": {
+        "ready": true,
+        "smoke": false
+      },
+      "evidence": {
+        "service_before": "b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79",
+        "operation": "41bf07567de59bd00f83ba5306bb488b6ed1df98b203e553dc15959e9dc930c2",
+        "health": "740c99b82ad54322687bc57373e81a67cfd1fae6136b5ce0cc7296c8bf7cf58b"
+      },
+      "reason": "service_after timeout after candidate smoke=false",
+      "observed_traffic": {
+        "payments-base": 90,
+        "payments-candidate": 10
+      }
+    },
+    "signature": "hw2RCmBFeAnJtTcQD4AI8EtMNdcPvQDtNIBaDRia82DqqdfAZOg8wDZ3fIHvMGTFLemWHhx3PuxMrPUlFp5bDQ=="
+  },
+  "raw_health": {
+    "nonce": "e36bb3c8878749949c3cdd7c01bea451",
+    "revision": "payments-candidate",
+    "checks": {
+      "ready": true,
+      "smoke": false
+    }
+  },
+  "raw_health_sha256": "740c99b82ad54322687bc57373e81a67cfd1fae6136b5ce0cc7296c8bf7cf58b",
+  "later_signed_passes": [
+    {
+      "payload": {
+        "kind": "OBSERVATION",
+        "intent_digest": "cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d",
+        "policy_digest": "0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a",
+        "target": "projects/pilot-project/locations/us-central1/services/payments",
+        "service_uid": "service-instance-01",
+        "challenge": "f6f4ee4d21d14ce587b6a94107ce7a4b",
+        "observed_at": 1010,
+        "operation": "projects/pilot-project/locations/us-central1/operations/op-1",
+        "generation": "11",
+        "verdict": "PASS",
+        "checks": {
+          "ready": true,
+          "smoke": true
+        },
+        "evidence": {
+          "service_before": "b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79",
+          "operation": "41bf07567de59bd00f83ba5306bb488b6ed1df98b203e553dc15959e9dc930c2",
+          "health": "e4b31c1c50736440f1b2e62bf5912b9edbe8a1343589b40e6fccf02ac53f104e",
+          "service_after": "b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79"
+        },
+        "reason": null,
+        "observed_traffic": {
+          "payments-base": 90,
+          "payments-candidate": 10
+        }
+      },
+      "signature": "fRM6dbcoTV9ZzrtPdn3SGabrp594G7g6eXkXx6p+Widj/V/ckMJx8EIy4AiBVOreElyiymPpjNLab7No89GJAg=="
+    },
+    {
+      "payload": {
+        "kind": "OBSERVATION",
+        "intent_digest": "cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d",
+        "policy_digest": "0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a",
+        "target": "projects/pilot-project/locations/us-central1/services/payments",
+        "service_uid": "service-instance-01",
+        "challenge": "86bb298577ca436a9df61a1712d65b74",
+        "observed_at": 1020,
+        "operation": "projects/pilot-project/locations/us-central1/operations/op-1",
+        "generation": "11",
+        "verdict": "PASS",
+        "checks": {
+          "ready": true,
+          "smoke": true
+        },
+        "evidence": {
+          "service_before": "b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79",
+          "operation": "41bf07567de59bd00f83ba5306bb488b6ed1df98b203e553dc15959e9dc930c2",
+          "health": "d4f3f81608f9632fcd863eeceb1ae835e1737e42edc1b57acda481585a77496d",
+          "service_after": "b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79"
+        },
+        "reason": null,
+        "observed_traffic": {
+          "payments-base": 90,
+          "payments-candidate": 10
+        }
+      },
+      "signature": "FjJgsATm6TVnKtGf0jYJBJEWz74E6TC+CZ6KaGZhdN4KI6pZSxLaFUYkYCrS5h1zZh4l6erzDAQyfgsQe6hpAg=="
+    },
+    {
+      "payload": {
+        "kind": "OBSERVATION",
+        "intent_digest": "cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d",
+        "policy_digest": "0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a",
+        "target": "projects/pilot-project/locations/us-central1/services/payments",
+        "service_uid": "service-instance-01",
+        "challenge": "d257fd271f434002ab40fce012213b27",
+        "observed_at": 1030,
+        "operation": "projects/pilot-project/locations/us-central1/operations/op-1",
+        "generation": "11",
+        "verdict": "PASS",
+        "checks": {
+          "ready": true,
+          "smoke": true
+        },
+        "evidence": {
+          "service_before": "b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79",
+          "operation": "41bf07567de59bd00f83ba5306bb488b6ed1df98b203e553dc15959e9dc930c2",
+          "health": "f64267cd3cfe9b052e3da186dfe94727e7de9870363cd3ffc44f95fdc9662105",
+          "service_after": "b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79"
+        },
+        "reason": null,
+        "observed_traffic": {
+          "payments-base": 90,
+          "payments-candidate": 10
+        }
+      },
+      "signature": "AqKsCwxtXRHKF8TzTAlk+CQr0K2D9zKVzTIO+9dBQO37N1gR/fhJokDXRhatzIPGQN6OGJOdh6+EyH8Lt+KvDA=="
+    }
+  ],
+  "states_after_restart": [
+    "OBSERVING",
+    "OBSERVING",
+    "COMPLETED"
+  ],
+  "final_state": "COMPLETED",
+  "completion": {
+    "kind": "COMPLETION_RECORD",
+    "objective_id": "objective-1",
+    "intent_digest": "cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d",
+    "policy_digest": "0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a",
+    "operation": "projects/pilot-project/locations/us-central1/operations/op-1",
+    "generation": "11",
+    "checks": [
+      "ready",
+      "smoke"
+    ],
+    "sample_count": 3,
+    "window_start": 1010,
+    "window_end": 1030,
+    "completed_at": 1030,
+    "sample_digests": [
+      "a9199d102a4d466f442c6da08e69dc0008a08519d3aa1f2d1e8be560d7485341",
+      "ce2dc6aac1daf43929cdede1d1ddd0421b4aa978f63611fc453454dfd57c9d56",
+      "0bb803a9bfd79d9299563e797cec56ddb928d32faf2ebec6e5ad9d4251b77493"
+    ],
+    "claim": "The approved operation is correlated with the observed traffic state; the configured candidate probe checks passed at the recorded sample times."
+  },
+  "writer_state": "SETTLED",
+  "simulated_mutations": 1,
+  "objective_history": [
+    {
+      "sequence": 1,
+      "record_id": "objective-1",
+      "event": "{\"at\": 1789184454, \"document\": {\"approval\": {\"payload\": {\"expires_at\": 1300, \"holder\": \"balance-coordinator\", \"intent\": {\"base_percent\": 90, \"base_revision\": \"payments-base\", \"candidate_percent\": 10, \"candidate_revision\": \"payments-candidate\", \"expected_etag\": \"v10\", \"expected_generation\": \"10\", \"objective_id\": \"objective-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"version\": 1}, \"issued_at\": 1000, \"issuer\": \"operator\", \"kind\": \"AUTHORIZATION\"}, \"signature\": \"3MK5yDUroekfi76q8BNBCPxwc4PR391tT6u/omSqAZbGdUJWcCjIFoalVBSDCAsQ/TMP0CIxDjaD7LgUXHSwDA==\"}, \"intent\": {\"base_percent\": 90, \"base_revision\": \"payments-base\", \"candidate_percent\": 10, \"candidate_revision\": \"payments-candidate\", \"expected_etag\": \"v10\", \"expected_generation\": \"10\", \"objective_id\": \"objective-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"version\": 1}, \"next_at\": 0, \"observations\": 0, \"samples\": []}, \"state\": \"READY\"}",
+      "previous": "0000000000000000000000000000000000000000000000000000000000000000",
+      "hash": "e8ffc807995f78e2a40c58590ba38a02b88375a886b4ba0356ed6b4393da0822"
+    },
+    {
+      "sequence": 2,
+      "record_id": "objective-1",
+      "event": "{\"at\": 1789184454, \"document\": {\"approval\": {\"payload\": {\"expires_at\": 1300, \"holder\": \"balance-coordinator\", \"intent\": {\"base_percent\": 90, \"base_revision\": \"payments-base\", \"candidate_percent\": 10, \"candidate_revision\": \"payments-candidate\", \"expected_etag\": \"v10\", \"expected_generation\": \"10\", \"objective_id\": \"objective-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"version\": 1}, \"issued_at\": 1000, \"issuer\": \"operator\", \"kind\": \"AUTHORIZATION\"}, \"signature\": \"3MK5yDUroekfi76q8BNBCPxwc4PR391tT6u/omSqAZbGdUJWcCjIFoalVBSDCAsQ/TMP0CIxDjaD7LgUXHSwDA==\"}, \"dispatch\": {\"payload\": {\"intent_digest\": \"cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d\", \"kind\": \"DISPATCH_RECORD\", \"objective_id\": \"objective-1\", \"operation\": \"projects/pilot-project/locations/us-central1/operations/op-1\", \"reason\": null, \"recorded_at\": 1000, \"state\": \"SUBMITTED\"}, \"signature\": \"GYJU4/mWWYhk1UsPVn1eC43ygVtXvfghHViicbkIKD82rUEE//0dkupghCBqt0irSVogyuKFvW0ACj+MvovWDg==\"}, \"intent\": {\"base_percent\": 90, \"base_revision\": \"payments-base\", \"candidate_percent\": 10, \"candidate_revision\": \"payments-candidate\", \"expected_etag\": \"v10\", \"expected_generation\": \"10\", \"objective_id\": \"objective-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"version\": 1}, \"last_observation\": {\"payload\": {\"challenge\": \"e36bb3c8878749949c3cdd7c01bea451\", \"checks\": {\"ready\": true, \"smoke\": false}, \"evidence\": {\"health\": \"740c99b82ad54322687bc57373e81a67cfd1fae6136b5ce0cc7296c8bf7cf58b\", \"operation\": \"41bf07567de59bd00f83ba5306bb488b6ed1df98b203e553dc15959e9dc930c2\", \"service_before\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\"}, \"generation\": \"11\", \"intent_digest\": \"cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d\", \"kind\": \"OBSERVATION\", \"observed_at\": 1000, \"observed_traffic\": {\"payments-base\": 90, \"payments-candidate\": 10}, \"operation\": \"projects/pilot-project/locations/us-central1/operations/op-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"reason\": \"service_after timeout after candidate smoke=false\", \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"verdict\": \"OBSERVATION_UNAVAILABLE\"}, \"signature\": \"hw2RCmBFeAnJtTcQD4AI8EtMNdcPvQDtNIBaDRia82DqqdfAZOg8wDZ3fIHvMGTFLemWHhx3PuxMrPUlFp5bDQ==\"}, \"next_action\": \"Continue bounded read-only observation; no new dispatch.\", \"next_at\": 1005, \"observations\": 1, \"samples\": []}, \"state\": \"OBSERVING\"}",
+      "previous": "e8ffc807995f78e2a40c58590ba38a02b88375a886b4ba0356ed6b4393da0822",
+      "hash": "5cb946cec424318f76b216530fd8e8082d66a1cc7e56507297984c39b8fe1c29"
+    },
+    {
+      "sequence": 3,
+      "record_id": "objective-1",
+      "event": "{\"at\": 1789184454, \"document\": {\"approval\": {\"payload\": {\"expires_at\": 1300, \"holder\": \"balance-coordinator\", \"intent\": {\"base_percent\": 90, \"base_revision\": \"payments-base\", \"candidate_percent\": 10, \"candidate_revision\": \"payments-candidate\", \"expected_etag\": \"v10\", \"expected_generation\": \"10\", \"objective_id\": \"objective-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"version\": 1}, \"issued_at\": 1000, \"issuer\": \"operator\", \"kind\": \"AUTHORIZATION\"}, \"signature\": \"3MK5yDUroekfi76q8BNBCPxwc4PR391tT6u/omSqAZbGdUJWcCjIFoalVBSDCAsQ/TMP0CIxDjaD7LgUXHSwDA==\"}, \"dispatch\": {\"payload\": {\"intent_digest\": \"cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d\", \"kind\": \"DISPATCH_RECORD\", \"objective_id\": \"objective-1\", \"operation\": \"projects/pilot-project/locations/us-central1/operations/op-1\", \"reason\": null, \"recorded_at\": 1000, \"state\": \"SUBMITTED\"}, \"signature\": \"GYJU4/mWWYhk1UsPVn1eC43ygVtXvfghHViicbkIKD82rUEE//0dkupghCBqt0irSVogyuKFvW0ACj+MvovWDg==\"}, \"intent\": {\"base_percent\": 90, \"base_revision\": \"payments-base\", \"candidate_percent\": 10, \"candidate_revision\": \"payments-candidate\", \"expected_etag\": \"v10\", \"expected_generation\": \"10\", \"objective_id\": \"objective-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"version\": 1}, \"last_observation\": {\"payload\": {\"challenge\": \"1711da5a886e4b109d04c99a7bfc28c4\", \"checks\": {\"ready\": true, \"smoke\": true}, \"evidence\": {\"health\": \"c82b513c3c8b7be5fe639edf2b071276e8f2d1d3a77be08d06439bd36d30558c\", \"operation\": \"41bf07567de59bd00f83ba5306bb488b6ed1df98b203e553dc15959e9dc930c2\", \"service_after\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\", \"service_before\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\"}, \"generation\": \"11\", \"intent_digest\": \"cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d\", \"kind\": \"OBSERVATION\", \"observed_at\": 1010, \"observed_traffic\": {\"payments-base\": 90, \"payments-candidate\": 10}, \"operation\": \"projects/pilot-project/locations/us-central1/operations/op-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"reason\": null, \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"verdict\": \"PASS\"}, \"signature\": \"CTQXx1StSGgeswcKvx1zHws8KxoeWi30D6+XXJI27kiDUQ8pdAQpQXYxQkzGA7byY0yJQh7ad8GzQOimbIs/Cg==\"}, \"next_action\": \"Continue bounded read-only observation; no new dispatch.\", \"next_at\": 1015, \"observations\": 2, \"samples\": [{\"payload\": {\"challenge\": \"1711da5a886e4b109d04c99a7bfc28c4\", \"checks\": {\"ready\": true, \"smoke\": true}, \"evidence\": {\"health\": \"c82b513c3c8b7be5fe639edf2b071276e8f2d1d3a77be08d06439bd36d30558c\", \"operation\": \"41bf07567de59bd00f83ba5306bb488b6ed1df98b203e553dc15959e9dc930c2\", \"service_after\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\", \"service_before\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\"}, \"generation\": \"11\", \"intent_digest\": \"cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d\", \"kind\": \"OBSERVATION\", \"observed_at\": 1010, \"observed_traffic\": {\"payments-base\": 90, \"payments-candidate\": 10}, \"operation\": \"projects/pilot-project/locations/us-central1/operations/op-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"reason\": null, \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"verdict\": \"PASS\"}, \"signature\": \"CTQXx1StSGgeswcKvx1zHws8KxoeWi30D6+XXJI27kiDUQ8pdAQpQXYxQkzGA7byY0yJQh7ad8GzQOimbIs/Cg==\"}]}, \"state\": \"OBSERVING\"}",
+      "previous": "5cb946cec424318f76b216530fd8e8082d66a1cc7e56507297984c39b8fe1c29",
+      "hash": "26e8d0878a8a1507634a72f0fb67248786f6868c33cf2cc9ec50770e38769399"
+    },
+    {
+      "sequence": 4,
+      "record_id": "objective-1",
+      "event": "{\"at\": 1789184454, \"document\": {\"approval\": {\"payload\": {\"expires_at\": 1300, \"holder\": \"balance-coordinator\", \"intent\": {\"base_percent\": 90, \"base_revision\": \"payments-base\", \"candidate_percent\": 10, \"candidate_revision\": \"payments-candidate\", \"expected_etag\": \"v10\", \"expected_generation\": \"10\", \"objective_id\": \"objective-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"version\": 1}, \"issued_at\": 1000, \"issuer\": \"operator\", \"kind\": \"AUTHORIZATION\"}, \"signature\": \"3MK5yDUroekfi76q8BNBCPxwc4PR391tT6u/omSqAZbGdUJWcCjIFoalVBSDCAsQ/TMP0CIxDjaD7LgUXHSwDA==\"}, \"dispatch\": {\"payload\": {\"intent_digest\": \"cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d\", \"kind\": \"DISPATCH_RECORD\", \"objective_id\": \"objective-1\", \"operation\": \"projects/pilot-project/locations/us-central1/operations/op-1\", \"reason\": null, \"recorded_at\": 1000, \"state\": \"SUBMITTED\"}, \"signature\": \"GYJU4/mWWYhk1UsPVn1eC43ygVtXvfghHViicbkIKD82rUEE//0dkupghCBqt0irSVogyuKFvW0ACj+MvovWDg==\"}, \"intent\": {\"base_percent\": 90, \"base_revision\": \"payments-base\", \"candidate_percent\": 10, \"candidate_revision\": \"payments-candidate\", \"expected_etag\": \"v10\", \"expected_generation\": \"10\", \"objective_id\": \"objective-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"version\": 1}, \"last_observation\": {\"payload\": {\"challenge\": \"1f4a5c724b314d6699e998ac5fd8fb37\", \"checks\": {\"ready\": true, \"smoke\": true}, \"evidence\": {\"health\": \"6628451801d80c84ba6461535e59d7d8b96fac45bc19e57c330a898ee39f9297\", \"operation\": \"41bf07567de59bd00f83ba5306bb488b6ed1df98b203e553dc15959e9dc930c2\", \"service_after\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\", \"service_before\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\"}, \"generation\": \"11\", \"intent_digest\": \"cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d\", \"kind\": \"OBSERVATION\", \"observed_at\": 1020, \"observed_traffic\": {\"payments-base\": 90, \"payments-candidate\": 10}, \"operation\": \"projects/pilot-project/locations/us-central1/operations/op-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"reason\": null, \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"verdict\": \"PASS\"}, \"signature\": \"OIT50iu93FsXPsGNFybAN4sp0jqqlp2MBvsT8OWVfGslBdljFVsU/wB1cc5aMHouKqUjaPrmjLp+FRLNHZLWCg==\"}, \"next_action\": \"Continue bounded read-only observation; no new dispatch.\", \"next_at\": 1025, \"observations\": 3, \"samples\": [{\"payload\": {\"challenge\": \"1711da5a886e4b109d04c99a7bfc28c4\", \"checks\": {\"ready\": true, \"smoke\": true}, \"evidence\": {\"health\": \"c82b513c3c8b7be5fe639edf2b071276e8f2d1d3a77be08d06439bd36d30558c\", \"operation\": \"41bf07567de59bd00f83ba5306bb488b6ed1df98b203e553dc15959e9dc930c2\", \"service_after\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\", \"service_before\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\"}, \"generation\": \"11\", \"intent_digest\": \"cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d\", \"kind\": \"OBSERVATION\", \"observed_at\": 1010, \"observed_traffic\": {\"payments-base\": 90, \"payments-candidate\": 10}, \"operation\": \"projects/pilot-project/locations/us-central1/operations/op-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"reason\": null, \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"verdict\": \"PASS\"}, \"signature\": \"CTQXx1StSGgeswcKvx1zHws8KxoeWi30D6+XXJI27kiDUQ8pdAQpQXYxQkzGA7byY0yJQh7ad8GzQOimbIs/Cg==\"}, {\"payload\": {\"challenge\": \"1f4a5c724b314d6699e998ac5fd8fb37\", \"checks\": {\"ready\": true, \"smoke\": true}, \"evidence\": {\"health\": \"6628451801d80c84ba6461535e59d7d8b96fac45bc19e57c330a898ee39f9297\", \"operation\": \"41bf07567de59bd00f83ba5306bb488b6ed1df98b203e553dc15959e9dc930c2\", \"service_after\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\", \"service_before\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\"}, \"generation\": \"11\", \"intent_digest\": \"cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d\", \"kind\": \"OBSERVATION\", \"observed_at\": 1020, \"observed_traffic\": {\"payments-base\": 90, \"payments-candidate\": 10}, \"operation\": \"projects/pilot-project/locations/us-central1/operations/op-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"reason\": null, \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"verdict\": \"PASS\"}, \"signature\": \"OIT50iu93FsXPsGNFybAN4sp0jqqlp2MBvsT8OWVfGslBdljFVsU/wB1cc5aMHouKqUjaPrmjLp+FRLNHZLWCg==\"}]}, \"state\": \"OBSERVING\"}",
+      "previous": "26e8d0878a8a1507634a72f0fb67248786f6868c33cf2cc9ec50770e38769399",
+      "hash": "11e9991390288225ecab01128f468cbd335c9a0b67ffdb60713d75a416589f4e"
+    },
+    {
+      "sequence": 5,
+      "record_id": "objective-1",
+      "event": "{\"at\": 1789184454, \"document\": {\"approval\": {\"payload\": {\"expires_at\": 1300, \"holder\": \"balance-coordinator\", \"intent\": {\"base_percent\": 90, \"base_revision\": \"payments-base\", \"candidate_percent\": 10, \"candidate_revision\": \"payments-candidate\", \"expected_etag\": \"v10\", \"expected_generation\": \"10\", \"objective_id\": \"objective-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"version\": 1}, \"issued_at\": 1000, \"issuer\": \"operator\", \"kind\": \"AUTHORIZATION\"}, \"signature\": \"3MK5yDUroekfi76q8BNBCPxwc4PR391tT6u/omSqAZbGdUJWcCjIFoalVBSDCAsQ/TMP0CIxDjaD7LgUXHSwDA==\"}, \"completion\": {\"checks\": [\"ready\", \"smoke\"], \"claim\": \"The approved operation is correlated with the observed traffic state; the configured candidate probe checks passed at the recorded sample times.\", \"completed_at\": 1030, \"generation\": \"11\", \"intent_digest\": \"cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d\", \"kind\": \"COMPLETION_RECORD\", \"objective_id\": \"objective-1\", \"operation\": \"projects/pilot-project/locations/us-central1/operations/op-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"sample_count\": 3, \"sample_digests\": [\"a9199d102a4d466f442c6da08e69dc0008a08519d3aa1f2d1e8be560d7485341\", \"ce2dc6aac1daf43929cdede1d1ddd0421b4aa978f63611fc453454dfd57c9d56\", \"0bb803a9bfd79d9299563e797cec56ddb928d32faf2ebec6e5ad9d4251b77493\"], \"window_end\": 1030, \"window_start\": 1010}, \"dispatch\": {\"payload\": {\"intent_digest\": \"cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d\", \"kind\": \"DISPATCH_RECORD\", \"objective_id\": \"objective-1\", \"operation\": \"projects/pilot-project/locations/us-central1/operations/op-1\", \"reason\": null, \"recorded_at\": 1000, \"state\": \"SUBMITTED\"}, \"signature\": \"GYJU4/mWWYhk1UsPVn1eC43ygVtXvfghHViicbkIKD82rUEE//0dkupghCBqt0irSVogyuKFvW0ACj+MvovWDg==\"}, \"intent\": {\"base_percent\": 90, \"base_revision\": \"payments-base\", \"candidate_percent\": 10, \"candidate_revision\": \"payments-candidate\", \"expected_etag\": \"v10\", \"expected_generation\": \"10\", \"objective_id\": \"objective-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"version\": 1}, \"last_observation\": {\"payload\": {\"challenge\": \"f1ecf00643f3453eb22f92c5bf405bd6\", \"checks\": {\"ready\": true, \"smoke\": true}, \"evidence\": {\"health\": \"a9ba63a96200068557ae84832a50030f097bed28415df3ac2d5b667afb047aa0\", \"operation\": \"41bf07567de59bd00f83ba5306bb488b6ed1df98b203e553dc15959e9dc930c2\", \"service_after\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\", \"service_before\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\"}, \"generation\": \"11\", \"intent_digest\": \"cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d\", \"kind\": \"OBSERVATION\", \"observed_at\": 1030, \"observed_traffic\": {\"payments-base\": 90, \"payments-candidate\": 10}, \"operation\": \"projects/pilot-project/locations/us-central1/operations/op-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"reason\": null, \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"verdict\": \"PASS\"}, \"signature\": \"QTevT5vO9EVdM6rA2pCRy3/I1c8Mu4enAEcwNGFfJdVvNMioRmq2pyHj1guW0RwR6UGRkxmf0tElzc2VzYx+BA==\"}, \"next_action\": \"Declared canary checks satisfied at the recorded times. Further rollout requires separate authority.\", \"next_at\": 1025, \"observations\": 4, \"samples\": [{\"payload\": {\"challenge\": \"1711da5a886e4b109d04c99a7bfc28c4\", \"checks\": {\"ready\": true, \"smoke\": true}, \"evidence\": {\"health\": \"c82b513c3c8b7be5fe639edf2b071276e8f2d1d3a77be08d06439bd36d30558c\", \"operation\": \"41bf07567de59bd00f83ba5306bb488b6ed1df98b203e553dc15959e9dc930c2\", \"service_after\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\", \"service_before\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\"}, \"generation\": \"11\", \"intent_digest\": \"cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d\", \"kind\": \"OBSERVATION\", \"observed_at\": 1010, \"observed_traffic\": {\"payments-base\": 90, \"payments-candidate\": 10}, \"operation\": \"projects/pilot-project/locations/us-central1/operations/op-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"reason\": null, \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"verdict\": \"PASS\"}, \"signature\": \"CTQXx1StSGgeswcKvx1zHws8KxoeWi30D6+XXJI27kiDUQ8pdAQpQXYxQkzGA7byY0yJQh7ad8GzQOimbIs/Cg==\"}, {\"payload\": {\"challenge\": \"1f4a5c724b314d6699e998ac5fd8fb37\", \"checks\": {\"ready\": true, \"smoke\": true}, \"evidence\": {\"health\": \"6628451801d80c84ba6461535e59d7d8b96fac45bc19e57c330a898ee39f9297\", \"operation\": \"41bf07567de59bd00f83ba5306bb488b6ed1df98b203e553dc15959e9dc930c2\", \"service_after\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\", \"service_before\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\"}, \"generation\": \"11\", \"intent_digest\": \"cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d\", \"kind\": \"OBSERVATION\", \"observed_at\": 1020, \"observed_traffic\": {\"payments-base\": 90, \"payments-candidate\": 10}, \"operation\": \"projects/pilot-project/locations/us-central1/operations/op-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"reason\": null, \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"verdict\": \"PASS\"}, \"signature\": \"OIT50iu93FsXPsGNFybAN4sp0jqqlp2MBvsT8OWVfGslBdljFVsU/wB1cc5aMHouKqUjaPrmjLp+FRLNHZLWCg==\"}, {\"payload\": {\"challenge\": \"f1ecf00643f3453eb22f92c5bf405bd6\", \"checks\": {\"ready\": true, \"smoke\": true}, \"evidence\": {\"health\": \"a9ba63a96200068557ae84832a50030f097bed28415df3ac2d5b667afb047aa0\", \"operation\": \"41bf07567de59bd00f83ba5306bb488b6ed1df98b203e553dc15959e9dc930c2\", \"service_after\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\", \"service_before\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\"}, \"generation\": \"11\", \"intent_digest\": \"cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d\", \"kind\": \"OBSERVATION\", \"observed_at\": 1030, \"observed_traffic\": {\"payments-base\": 90, \"payments-candidate\": 10}, \"operation\": \"projects/pilot-project/locations/us-central1/operations/op-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"reason\": null, \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"verdict\": \"PASS\"}, \"signature\": \"QTevT5vO9EVdM6rA2pCRy3/I1c8Mu4enAEcwNGFfJdVvNMioRmq2pyHj1guW0RwR6UGRkxmf0tElzc2VzYx+BA==\"}], \"settled\": false}, \"state\": \"COMPLETED\"}",
+      "previous": "11e9991390288225ecab01128f468cbd335c9a0b67ffdb60713d75a416589f4e",
+      "hash": "e103c28c64ba827b2cbb2018d0be2afac524901b198c9ee1ac08fbfc14035fe6"
+    },
+    {
+      "sequence": 6,
+      "record_id": "objective-1",
+      "event": "{\"at\": 1789184454, \"document\": {\"approval\": {\"payload\": {\"expires_at\": 1300, \"holder\": \"balance-coordinator\", \"intent\": {\"base_percent\": 90, \"base_revision\": \"payments-base\", \"candidate_percent\": 10, \"candidate_revision\": \"payments-candidate\", \"expected_etag\": \"v10\", \"expected_generation\": \"10\", \"objective_id\": \"objective-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"version\": 1}, \"issued_at\": 1000, \"issuer\": \"operator\", \"kind\": \"AUTHORIZATION\"}, \"signature\": \"3MK5yDUroekfi76q8BNBCPxwc4PR391tT6u/omSqAZbGdUJWcCjIFoalVBSDCAsQ/TMP0CIxDjaD7LgUXHSwDA==\"}, \"completion\": {\"checks\": [\"ready\", \"smoke\"], \"claim\": \"The approved operation is correlated with the observed traffic state; the configured candidate probe checks passed at the recorded sample times.\", \"completed_at\": 1030, \"generation\": \"11\", \"intent_digest\": \"cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d\", \"kind\": \"COMPLETION_RECORD\", \"objective_id\": \"objective-1\", \"operation\": \"projects/pilot-project/locations/us-central1/operations/op-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"sample_count\": 3, \"sample_digests\": [\"a9199d102a4d466f442c6da08e69dc0008a08519d3aa1f2d1e8be560d7485341\", \"ce2dc6aac1daf43929cdede1d1ddd0421b4aa978f63611fc453454dfd57c9d56\", \"0bb803a9bfd79d9299563e797cec56ddb928d32faf2ebec6e5ad9d4251b77493\"], \"window_end\": 1030, \"window_start\": 1010}, \"dispatch\": {\"payload\": {\"intent_digest\": \"cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d\", \"kind\": \"DISPATCH_RECORD\", \"objective_id\": \"objective-1\", \"operation\": \"projects/pilot-project/locations/us-central1/operations/op-1\", \"reason\": null, \"recorded_at\": 1000, \"state\": \"SUBMITTED\"}, \"signature\": \"GYJU4/mWWYhk1UsPVn1eC43ygVtXvfghHViicbkIKD82rUEE//0dkupghCBqt0irSVogyuKFvW0ACj+MvovWDg==\"}, \"intent\": {\"base_percent\": 90, \"base_revision\": \"payments-base\", \"candidate_percent\": 10, \"candidate_revision\": \"payments-candidate\", \"expected_etag\": \"v10\", \"expected_generation\": \"10\", \"objective_id\": \"objective-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"version\": 1}, \"last_observation\": {\"payload\": {\"challenge\": \"f1ecf00643f3453eb22f92c5bf405bd6\", \"checks\": {\"ready\": true, \"smoke\": true}, \"evidence\": {\"health\": \"a9ba63a96200068557ae84832a50030f097bed28415df3ac2d5b667afb047aa0\", \"operation\": \"41bf07567de59bd00f83ba5306bb488b6ed1df98b203e553dc15959e9dc930c2\", \"service_after\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\", \"service_before\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\"}, \"generation\": \"11\", \"intent_digest\": \"cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d\", \"kind\": \"OBSERVATION\", \"observed_at\": 1030, \"observed_traffic\": {\"payments-base\": 90, \"payments-candidate\": 10}, \"operation\": \"projects/pilot-project/locations/us-central1/operations/op-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"reason\": null, \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"verdict\": \"PASS\"}, \"signature\": \"QTevT5vO9EVdM6rA2pCRy3/I1c8Mu4enAEcwNGFfJdVvNMioRmq2pyHj1guW0RwR6UGRkxmf0tElzc2VzYx+BA==\"}, \"next_action\": \"Declared canary checks satisfied at the recorded times. Further rollout requires separate authority.\", \"next_at\": 1025, \"observations\": 4, \"samples\": [{\"payload\": {\"challenge\": \"1711da5a886e4b109d04c99a7bfc28c4\", \"checks\": {\"ready\": true, \"smoke\": true}, \"evidence\": {\"health\": \"c82b513c3c8b7be5fe639edf2b071276e8f2d1d3a77be08d06439bd36d30558c\", \"operation\": \"41bf07567de59bd00f83ba5306bb488b6ed1df98b203e553dc15959e9dc930c2\", \"service_after\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\", \"service_before\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\"}, \"generation\": \"11\", \"intent_digest\": \"cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d\", \"kind\": \"OBSERVATION\", \"observed_at\": 1010, \"observed_traffic\": {\"payments-base\": 90, \"payments-candidate\": 10}, \"operation\": \"projects/pilot-project/locations/us-central1/operations/op-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"reason\": null, \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"verdict\": \"PASS\"}, \"signature\": \"CTQXx1StSGgeswcKvx1zHws8KxoeWi30D6+XXJI27kiDUQ8pdAQpQXYxQkzGA7byY0yJQh7ad8GzQOimbIs/Cg==\"}, {\"payload\": {\"challenge\": \"1f4a5c724b314d6699e998ac5fd8fb37\", \"checks\": {\"ready\": true, \"smoke\": true}, \"evidence\": {\"health\": \"6628451801d80c84ba6461535e59d7d8b96fac45bc19e57c330a898ee39f9297\", \"operation\": \"41bf07567de59bd00f83ba5306bb488b6ed1df98b203e553dc15959e9dc930c2\", \"service_after\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\", \"service_before\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\"}, \"generation\": \"11\", \"intent_digest\": \"cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d\", \"kind\": \"OBSERVATION\", \"observed_at\": 1020, \"observed_traffic\": {\"payments-base\": 90, \"payments-candidate\": 10}, \"operation\": \"projects/pilot-project/locations/us-central1/operations/op-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"reason\": null, \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"verdict\": \"PASS\"}, \"signature\": \"OIT50iu93FsXPsGNFybAN4sp0jqqlp2MBvsT8OWVfGslBdljFVsU/wB1cc5aMHouKqUjaPrmjLp+FRLNHZLWCg==\"}, {\"payload\": {\"challenge\": \"f1ecf00643f3453eb22f92c5bf405bd6\", \"checks\": {\"ready\": true, \"smoke\": true}, \"evidence\": {\"health\": \"a9ba63a96200068557ae84832a50030f097bed28415df3ac2d5b667afb047aa0\", \"operation\": \"41bf07567de59bd00f83ba5306bb488b6ed1df98b203e553dc15959e9dc930c2\", \"service_after\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\", \"service_before\": \"b896155a104165bc25bbb6c1816af5a3a96c9492b425edb5d99d1c8d6321cc79\"}, \"generation\": \"11\", \"intent_digest\": \"cb0c865311bf60520b59bb366977278eff108ce0524c7b139ce3df890dd29e3d\", \"kind\": \"OBSERVATION\", \"observed_at\": 1030, \"observed_traffic\": {\"payments-base\": 90, \"payments-candidate\": 10}, \"operation\": \"projects/pilot-project/locations/us-central1/operations/op-1\", \"policy_digest\": \"0a0d605cbffd929b09bc5a14c329d752973e118f975ab2925ec961598945eb0a\", \"reason\": null, \"service_uid\": \"service-instance-01\", \"target\": \"projects/pilot-project/locations/us-central1/services/payments\", \"verdict\": \"PASS\"}, \"signature\": \"QTevT5vO9EVdM6rA2pCRy3/I1c8Mu4enAEcwNGFfJdVvNMioRmq2pyHj1guW0RwR6UGRkxmf0tElzc2VzYx+BA==\"}], \"settled\": true}, \"state\": \"COMPLETED\"}",
+      "previous": "e103c28c64ba827b2cbb2018d0be2afac524901b198c9ee1ac08fbfc14035fe6",
+      "hash": "1c9067ec8b69fee8e1964cdecc48f3f07139c7bc34a5dc64f6c53d7ffad661df"
+    }
+  ],
+  "public_verification_keys": {
+    "writer": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAN+0LKyi2xUyuKvT/BbStQzwFFbUgaPBFHbp4svL5BRM=\n-----END PUBLIC KEY-----\n",
+    "observer": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEARx7qwEmGeo8cYPQ3iW76W8RxPtcJ/qkPq5hrj6BdlHQ=\n-----END PUBLIC KEY-----\n"
+  }
+}

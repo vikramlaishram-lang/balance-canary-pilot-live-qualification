@@ -1,0 +1,27 @@
+{
+  "status": "PREPARED_NOT_DEPLOYED",
+  "project": null,
+  "region": "asia-south1",
+  "service": "balance-canary-target",
+  "base_revision": null,
+  "candidate_revision": null,
+  "markers": [
+    "baseline",
+    "candidate"
+  ],
+  "initial_traffic": {
+    "base": 100,
+    "candidate": 0
+  },
+  "pilot_consequence": {
+    "base": 90,
+    "candidate": 10
+  },
+  "balance_candidate_sha256": "00ea748bdacab7b743bf54db2fbf6ee976ac6cdbc249cc3a8c176b80346cf74e",
+  "required_operator_inputs": [
+    "unused disposable project ID",
+    "selected billing account",
+    "authenticated gcloud and Docker",
+    "organization/folder if required"
+  ]
+}

@@ -1,0 +1,117 @@
+--- 0.1.0/balance/engine.py
++++ 0.1.1/balance/engine.py
+@@ -168,8 +168,13 @@
+                                 and traffic_map(after.get("trafficStatuses"), intent["target"]) == expected_traffic(intent),
+                                 "target changed during observation")
+         except Exception as exc:
+-            payload["verdict"] = "OBSERVATION_UNAVAILABLE"
+-            payload["reason"] = str(exc)[:300]
++            # A later read failure adds uncertainty; it cannot erase an
++            # already established failure of the required candidate checks.
++            if payload["verdict"] == "CHECK_FAILED":
++                payload["reason"] = ("Final target verification unavailable: " + str(exc))[:300]
++            else:
++                payload["verdict"] = "OBSERVATION_UNAVAILABLE"
++                payload["reason"] = str(exc)[:300]
+         payload["observed_at"] = int(self.clock())
+         return sign(payload, self.signing_private)
+ 
+@@ -267,16 +272,22 @@
+             require(type(observed.get("observed_at")) is int and 0 <= int(self.clock()) - observed["observed_at"] <= self.policy.value["evidence_max_age_seconds"], "stale observation")
+             doc["last_observation"] = sample
+             doc["observations"] += 1
+-            verdict = observed["verdict"]
++            verdict = observed.get("verdict")
++            checks = observed.get("checks")
++            failed_required_check = type(checks) is dict and any(
++                checks.get(k) is False for k in self.policy.value["required_checks"])
++            # Signed check facts retain their meaning even if the observer's
++            # summary verdict is neutral or contradictory.
++            if failed_required_check or verdict in {"CHECK_FAILED", "STATE_DIVERGED", "OPERATION_ERROR"}:
++                doc["samples"] = []
++                doc["next_action"] = "Operator review required. No rollback or repeat mutation is authorized by this objective."
++                return self.store.update(objective_id, "NEEDS_REVIEW", doc, {"READY", "OBSERVING", "OUTCOME_UNKNOWN"})
+             if verdict == "PASS":
+                 if doc["samples"] and doc["samples"][-1]["payload"]["generation"] != observed["generation"]:
+                     doc["samples"] = []
+                 doc["samples"].append(sample)
+             elif verdict != "BASE_SAMPLE":
+                 doc["samples"] = []
+-            if verdict in {"CHECK_FAILED", "STATE_DIVERGED", "OPERATION_ERROR"}:
+-                doc["next_action"] = "Operator review required. No rollback or repeat mutation is authorized by this objective."
+-                return self.store.update(objective_id, "NEEDS_REVIEW", doc, {"READY", "OBSERVING", "OUTCOME_UNKNOWN"})
+             try:
+                 completion = validate_completion(self.policy, intent, dispatch, doc["samples"], self.observer_public,
+                                                  int(self.clock()), writer_public=self.writer_public)
+--- 0.1.0/tests/test_runtime.py
++++ 0.1.1/tests/test_runtime.py
+@@ -242,6 +242,69 @@
+     def test_failed_candidate_check_requires_review(self):
+         self.cloud.health_mode = "failed"
+         self.assertEqual(self.complete()["state"], "NEEDS_REVIEW")
++        self.assertEqual(self.cloud.calls, 1)
++
++    def test_failed_check_survives_final_read_outage_and_restart(self):
++        self.cloud.health_mode = "failed"
++        self.coordinator.submit(self.approval)
++        read_service, read_probe = self.cloud.service, self.cloud.probe
++        health_received = False
++
++        def probe(nonce):
++            nonlocal health_received
++            result = read_probe(nonce)
++            health_received = True
++            return result
++
++        def service(target):
++            if health_received:
++                raise TimeoutError("service_after unavailable after failed candidate check")
++            return read_service(target)
++
++        with patch.object(self.cloud, "probe", side_effect=probe), patch.object(self.cloud, "service", side_effect=service):
++            first = self.coordinator.advance("objective-1")
++
++        observed = verify(first["document"]["last_observation"], self.root / "observer.pub", "OBSERVATION")
++        self.assertEqual(observed["verdict"], "CHECK_FAILED")
++        self.assertEqual(observed["checks"], {"ready": True, "smoke": False})
++        self.assertIn("service_after unavailable", observed["reason"])
++        self.assertNotIn("service_after", observed["evidence"])
++        raw = (self.root / "evidence" / (observed["evidence"]["health"] + ".bin")).read_bytes()
++        self.assertIs(json.loads(raw)["checks"]["smoke"], False)
++        self.assertEqual(first["state"], "NEEDS_REVIEW")
++
++        self.cloud.health_mode = "ok"
++        resumed = self.make_coordinator()
++        for self.now in (1010, 1020, 1030):
++            sample = self.observer.sample(self.intent, first["document"]["dispatch"], uuid4().hex)
++            self.assertEqual(verify(sample, self.root / "observer.pub", "OBSERVATION")["verdict"], "PASS")
++            result = resumed.advance("objective-1")
++            self.assertEqual(result, first)
++            self.assertNotIn("completion", result["document"])
++        self.assertEqual(self.cloud.calls, 1)
++        self.assertEqual(self.writer.store.get("objective-1")["state"], "SUBMITTED")
++
++    def test_signed_failed_check_requires_review_despite_neutral_verdict(self):
++        self.cloud.health_mode = "failed"
++        self.coordinator.submit(self.approval)
++        observe = self.observer.sample
++
++        def neutral_verdict(intent, dispatch, challenge):
++            sample = observe(intent, dispatch, challenge)
++            payload = copy.deepcopy(sample["payload"])
++            self.assertIs(payload["checks"]["smoke"], False)
++            # Simulate a trusted observer emitting the old contradictory claim.
++            payload["verdict"] = "OBSERVATION_UNAVAILABLE"
++            return sign(payload, self.root / "observer.key")
++
++        with patch.object(self.observer, "sample", side_effect=neutral_verdict):
++            result = self.coordinator.advance("objective-1")
++        observed = verify(result["document"]["last_observation"], self.root / "observer.pub", "OBSERVATION")
++        self.assertEqual(observed["verdict"], "OBSERVATION_UNAVAILABLE")
++        self.assertIs(observed["checks"]["smoke"], False)
++        self.assertEqual(result["state"], "NEEDS_REVIEW")
++        self.assertFalse(result["document"]["samples"])
++        self.assertNotIn("completion", result["document"])
+         self.assertEqual(self.cloud.calls, 1)
+ 
+     def test_stale_or_wrong_revision_probe_never_counts(self):

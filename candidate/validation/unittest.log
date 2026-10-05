@@ -1,0 +1,36 @@
+test_caller_cannot_supply_or_weaken_policy_checks (tests.test_runtime.RuntimeTests.test_caller_cannot_supply_or_weaken_policy_checks) ... ok
+test_cloud_request_carries_native_etag_and_only_traffic_mask (tests.test_runtime.RuntimeTests.test_cloud_request_carries_native_etag_and_only_traffic_mask) ... ok
+test_completion_durable_before_settlement_then_resumes_after_expiry (tests.test_runtime.RuntimeTests.test_completion_durable_before_settlement_then_resumes_after_expiry) ... ok
+test_completion_requires_generation_and_raw_evidence_references (tests.test_runtime.RuntimeTests.test_completion_requires_generation_and_raw_evidence_references) ... ok
+test_concurrent_same_intent_has_one_mutation (tests.test_runtime.RuntimeTests.test_concurrent_same_intent_has_one_mutation) ... ok
+test_contradictory_ready_state_still_rejected (tests.test_runtime.RuntimeTests.test_contradictory_ready_state_still_rejected) ... ok
+test_duplicate_json_keys_and_noninteger_numbers_rejected (tests.test_runtime.RuntimeTests.test_duplicate_json_keys_and_noninteger_numbers_rejected) ... ok
+test_duplicate_or_stale_observation_cannot_complete (tests.test_runtime.RuntimeTests.test_duplicate_or_stale_observation_cannot_complete) ... ok
+test_end_to_end_completion_and_exact_replay (tests.test_runtime.RuntimeTests.test_end_to_end_completion_and_exact_replay) ... ok
+test_expired_authority_has_no_dispatch (tests.test_runtime.RuntimeTests.test_expired_authority_has_no_dispatch) ... ok
+test_expiry_during_preflight_has_no_dispatch (tests.test_runtime.RuntimeTests.test_expiry_during_preflight_has_no_dispatch) ... ok
+test_external_change_during_health_observation_blocks_completion (tests.test_runtime.RuntimeTests.test_external_change_during_health_observation_blocks_completion) ... ok
+test_failed_candidate_check_requires_review (tests.test_runtime.RuntimeTests.test_failed_candidate_check_requires_review) ... ok
+test_failed_check_survives_final_read_outage_and_restart (tests.test_runtime.RuntimeTests.test_failed_check_survives_final_read_outage_and_restart) ... ok
+test_history_detects_edit_without_claiming_external_anchoring (tests.test_runtime.RuntimeTests.test_history_detects_edit_without_claiming_external_anchoring) ... ok
+test_intervening_rollback_not_overwritten_on_retry (tests.test_runtime.RuntimeTests.test_intervening_rollback_not_overwritten_on_retry) ... ok
+test_lost_ack_remains_unknown_despite_matching_state (tests.test_runtime.RuntimeTests.test_lost_ack_remains_unknown_despite_matching_state) ... ok
+test_mutating_any_intent_field_invalidates_authorization (tests.test_runtime.RuntimeTests.test_mutating_any_intent_field_invalidates_authorization) ... ok
+test_observation_budget_ends_in_review_without_erasing_unknown (tests.test_runtime.RuntimeTests.test_observation_budget_ends_in_review_without_erasing_unknown) ... ok
+test_observer_outage_retained_and_recovered_without_redispatch (tests.test_runtime.RuntimeTests.test_observer_outage_retained_and_recovered_without_redispatch) ... ok
+test_process_death_after_effect_preserves_reservation (tests.test_runtime.RuntimeTests.test_process_death_after_effect_preserves_reservation) ... ok
+test_protojson_omitted_false_reconciling_is_supported (tests.test_runtime.RuntimeTests.test_protojson_omitted_false_reconciling_is_supported) ... ok
+test_real_http_role_boundaries_and_end_to_end (tests.test_runtime.RuntimeTests.test_real_http_role_boundaries_and_end_to_end) ... ok
+test_same_id_new_validly_signed_intent_rejected (tests.test_runtime.RuntimeTests.test_same_id_new_validly_signed_intent_rejected) ... ok
+test_service_recreated_with_same_name_has_no_dispatch (tests.test_runtime.RuntimeTests.test_service_recreated_with_same_name_has_no_dispatch) ... ok
+test_signed_but_weakened_observation_cannot_complete (tests.test_runtime.RuntimeTests.test_signed_but_weakened_observation_cannot_complete) ... ok
+test_signed_failed_check_requires_review_despite_neutral_verdict (tests.test_runtime.RuntimeTests.test_signed_failed_check_requires_review_despite_neutral_verdict) ... ok
+test_stale_or_wrong_revision_probe_never_counts (tests.test_runtime.RuntimeTests.test_stale_or_wrong_revision_probe_never_counts) ... ok
+test_stale_target_version_has_no_dispatch (tests.test_runtime.RuntimeTests.test_stale_target_version_has_no_dispatch) ... ok
+test_unknown_intent_cannot_be_bypassed_with_new_objective_id (tests.test_runtime.RuntimeTests.test_unknown_intent_cannot_be_bypassed_with_new_objective_id) ... ok
+test_wrong_target_and_wrong_signer_observations_rejected (tests.test_runtime.RuntimeTests.test_wrong_target_and_wrong_signer_observations_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 1.017s
+
+OK

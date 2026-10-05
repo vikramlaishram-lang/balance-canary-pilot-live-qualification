@@ -1,0 +1,54 @@
+{
+  "README.md": {
+    "sha256": "9068741e884ff623bfc173f595fa760d8233bc50f77a38ad86af51d523248a6d",
+    "size_bytes": 8473
+  },
+  "VALIDATION.md": {
+    "sha256": "d713d4437a4a9a87bb2cbe561a7d90df12800c01670b8c58ae8b262efb397bd6",
+    "size_bytes": 2180
+  },
+  "provision.py": {
+    "sha256": "5aaa7c64c051e7295461cb21b661f652f1a1dda9689456978650e75acd360dbc",
+    "size_bytes": 13800
+  },
+  "runtime/BALANCE_Canary_Pilot_0.1.1_2026-09-12.zip": {
+    "sha256": "00ea748bdacab7b743bf54db2fbf6ee976ac6cdbc249cc3a8c176b80346cf74e",
+    "size_bytes": 60078
+  },
+  "target/.dockerignore": {
+    "sha256": "1da3a93780f57bbc3f5178eb2866b97c9cd37a0a9ec2d03e17c17c4440617606",
+    "size_bytes": 22
+  },
+  "target/Dockerfile": {
+    "sha256": "87bd3a9e5c7f06df08fc753d245e8de2f8a8d0b71a86c7fa5a00e2380d9a48d7",
+    "size_bytes": 167
+  },
+  "target/__init__.py": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size_bytes": 0
+  },
+  "target/app.py": {
+    "sha256": "0a761cde0d7c595bdcad1f745fcd49084aeda745ee71d54ca20c0a3a4497c29c",
+    "size_bytes": 2572
+  },
+  "tests/__init__.py": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size_bytes": 0
+  },
+  "tests/test_target.py": {
+    "sha256": "a0f6f77df959662c65cf4f2e814a291596d5696fa3322c94a53bcb738bbd6baf",
+    "size_bytes": 5949
+  },
+  "validation/prepared_plan.json": {
+    "sha256": "c2afc7fd23ad05e4d4ca07025f4bc908c0012d8c1d187b64329c380365e8beba",
+    "size_bytes": 641
+  },
+  "validation/results.json": {
+    "sha256": "67072a47b22b4cd33e4ed44543454a23b06ae43ecad6c910cbb3aaa2209cf60c",
+    "size_bytes": 587
+  },
+  "validation/unittest.log": {
+    "sha256": "db06d2f086e3440950031004be8eb0b0b586ad30bdf19d6b4883722e997bdaba",
+    "size_bytes": 928
+  }
+}

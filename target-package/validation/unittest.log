@@ -1,0 +1,11 @@
+test_pins_actual_fields_without_granting_authority (tests.test_target.PinningTests.test_pins_actual_fields_without_granting_authority) ... ok
+test_rejects_extra_revision_wrong_marker_and_wrong_initial_traffic (tests.test_target.PinningTests.test_rejects_extra_revision_wrong_marker_and_wrong_initial_traffic) ... ok
+test_checks_evaluate_configuration_and_application_behavior (tests.test_target.TargetTests.test_checks_evaluate_configuration_and_application_behavior) ... ok
+test_mutation_request_is_refused (tests.test_target.TargetTests.test_mutation_request_is_refused) ... ok
+test_nonce_is_required_unique_and_exact (tests.test_target.TargetTests.test_nonce_is_required_unique_and_exact) ... ok
+test_two_markers_and_probe_contract_over_http (tests.test_target.TargetTests.test_two_markers_and_probe_contract_over_http) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.515s
+
+OK

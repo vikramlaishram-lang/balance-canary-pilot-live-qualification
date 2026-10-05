@@ -1,0 +1,8 @@
+{
+  "revision": "payments-candidate",
+  "nonce": "EXACT_NONCE_FROM_REQUEST_QUERY",
+  "checks": {
+    "ready": true,
+    "smoke": true
+  }
+}

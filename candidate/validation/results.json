@@ -1,0 +1,27 @@
+{
+  "release": "0.1.1",
+  "qualification": "LOCAL_REGRESSION_VERIFIED_DEPLOYMENT_NOT_RUN",
+  "python": "3.12.14",
+  "cryptography": "46.0.0",
+  "test_exit_code": 0,
+  "test_count": 31,
+  "original_tests": 29,
+  "added_regressions": 2,
+  "container_build": "NOT_RUN",
+  "cloud_authentication": "NOT_RUN",
+  "cloud_consequence": "NOT_RUN",
+  "live_iam_boundary": "NOT_RUN",
+  "supported_reconciliation_resume": "OPEN",
+  "dependency_install": "NOT_ATTEMPTED_THIS_PATCH; installed cryptography used; deployment dependencies unqualified",
+  "available_commands": {
+    "docker": null,
+    "gcloud": null
+  },
+  "static_python_toml_yaml_checks": "PASS",
+  "original_29_test_methods_unchanged": true,
+  "baseline_integrity": "24/24 match; original archive preserved",
+  "exact_counterexample": "REPRODUCED_0.1.0; BLOCKED_0.1.1",
+  "regressions_before_fix": "2 expected failures",
+  "regressions_after_fix": "2 passes",
+  "configuration_checks": "static inspection only: coordinator internal network, no cloud/private signing-key mounts; no authority private key mounted; writer/observer ports unpublished"
+}

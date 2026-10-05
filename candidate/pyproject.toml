@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "balance-canary-pilot"
+version = "0.1.1"
+description = "Independent Balance runtime pilot for explicitly approved Cloud Run canaries"
+requires-python = ">=3.11"
+dependencies = ["cryptography>=46,<52"]
+
+[project.optional-dependencies]
+deploy = ["google-auth>=2.40,<3", "requests>=2.32,<3", "gunicorn>=23,<24"]
+
+[project.scripts]
+balance-canary = "balance.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["balance*"]

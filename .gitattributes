@@ -1,0 +1,6 @@
+# Preserve authenticated archive bytes in Git.
+candidate/** -text
+target-package/** -text
+artifacts/*.zip -text
+tools/verify_baseline.py text eol=lf
+

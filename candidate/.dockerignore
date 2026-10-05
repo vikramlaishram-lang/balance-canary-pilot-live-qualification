@@ -1,0 +1,5 @@
+*
+!Dockerfile
+!pyproject.toml
+!balance/
+!balance/*.py
